@@ -11,6 +11,7 @@ const axios = require("axios");
 
 exports.getCoords = asyncHandler(async(req, res, next) => {
     const {house, street, city, state} = req.query;
+
  
     const geoString = `${house}+${street.split(" ").join("+")}+${city},${state}`
     const URL = `${process.env.LOCATION_URL}${geoString}`
