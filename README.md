@@ -1,5 +1,17 @@
 # Geocoding Service
 
+
+## Environment Variables
+
+For development, environment variables are stored in the root directory under `/config/config.env`
+
+List of Environment Variables
+  - LOCATION_URL: mapquest api URL for geocoding
+  - REVERSE_URL: mapquest api URL for reverse geocoding
+  - OPEN_WEATHER_API_KEY: api key for open weather
+  - OPEN_WEATHER_URL: One call api URL for retreiving weather by latitude and longitude.
+    - ex: `https://api.openweathermap.org/data/2.5/onecall?lat=LAT&lon=LON&appid=API_KEY`
+
 ## Routes
 
 **Geocoding** `/locations?address={address}`
