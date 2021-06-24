@@ -6,8 +6,6 @@ const cors = require('cors')
 const morgan = require('morgan')
 const errorHandler = require("./middleware/error");
 
-const {getCoords} = require("./controllers/geocoding");
-
 const router = express.Router();
 
 
@@ -33,8 +31,9 @@ const limiter = rateLimit({
   app.use(cors());
 
 const geocoding = require('./routes/geocoding');
-
-app.use("/api/v1/geocoding", geocoding)
+const weather = require("./routes/weather")
+app.use("/api/v1/locations", geocoding)
+app.use("/api/v1/weather", weather)
 
 
 
@@ -59,10 +58,6 @@ process.on("unHandledRejection", (err, promise) => {
   
     server.close(() => process.exit(1));
   });
-  
-
-router.route("/").get(getCoords);
-
 
 
 
