@@ -1,5 +1,20 @@
 # Geocoding Service
 
+## Starting the App
+
+- Install dependencies with `npm install`
+
+  Dependencies:
+   ```
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+    ```
+- To start app in development mode, run the command `npm run dev`
 
 ## Environment Variables
 
