@@ -13,4 +13,6 @@
         "lng": 121.02814
     }
 }
-  ```
+```
+  
+ **Reverse Geocoding** `/locations?location={location}&reverse=true`
