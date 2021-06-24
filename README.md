@@ -18,9 +18,10 @@ Example Request: `GET - https://geocoding-service.herokuapp.com/api/v1/locations
 }
 ```
 
+Query Parameters:
+- address *(required)*: `String`
 
-
-
+*****
 
 **Reverse Geocoding** `/locations?location={location}&reverse=true`
 
@@ -62,7 +63,12 @@ Example Request: `GET - https://geocoding-service.herokuapp.com/api/v1/locations
 }
 ```
 
+Query Parameters:
+- location *(required)*: `[latitude: String, longitude: String]`
+- reverse *(required)*: Boolean
+  - if reverse is not added or is set to `false`, the response will not contain the correct information.
 
+*****
 
 **Weather** `/weather?address={address}`
 
