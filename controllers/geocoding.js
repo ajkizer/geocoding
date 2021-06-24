@@ -22,7 +22,7 @@ exports.geoCodeByLocation = asyncHandler(async(req, res, next) => {
 
      
         let geoData = await axios.get(LOCATION_URL);
-        res.status(200).json({success: true, data: geoData.data})
+        res.status(200).json({success: true, data: geoData.data.results[0].locations[0]})
 
     } else {
 
