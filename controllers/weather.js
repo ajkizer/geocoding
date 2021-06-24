@@ -53,6 +53,9 @@ exports.getWeather = asyncHandler(async(req, res, next) => {
         OPEN_WEATHER_URL = `${OPEN_WEATHER_URL},daily`
     }
 
+    if(!req.query.hourly){
+        OPEN_WEATHER_URL = `${OPEN_WEATHER_URL},hourly`
+    }
 
 
 
